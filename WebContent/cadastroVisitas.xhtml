@@ -11,9 +11,10 @@
 			<h:outputText value="Cadastro de Visitas"/>
 			
 			<h:outputLabel value="Nome Visitante: " />
+			<br/>
 			<h:inputText value="#{controllerVisitas.visitante}" />
 			<br/>
-			<h:commandButton action="#{controllerVisitas.entrouVisita()}" value="incluir" />
+			<h:commandButton action="#{controllerVisitas.entrouVisita}" value="incluir" />
 			<br/>
 			
 			<h:dataTable var="visita" value="#{controllerVisitas.visitas}" border="1" rows="5">

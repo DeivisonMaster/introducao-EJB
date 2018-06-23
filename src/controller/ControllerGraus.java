@@ -3,7 +3,7 @@ package controller;
 import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
 
-import model.Bean;
+import model.Temperatura;
 
 @ManagedBean
 public class ControllerGraus {
@@ -12,7 +12,7 @@ public class ControllerGraus {
 	private double celsius;
 	
 	@EJB
-	private Bean grausBean;
+	private Temperatura grausBean;
 
 	
 	public void converterParaFahrenheit(){
@@ -27,8 +27,5 @@ public class ControllerGraus {
 	}
 	public double getResultadoF() {
 		return resultadoF;
-	}
-	public void setResultadoF(double resultadoF) {
-		this.resultadoF = resultadoF;
 	}
 }
