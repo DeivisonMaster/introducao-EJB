@@ -8,6 +8,8 @@ import javax.ejb.Stateful;
 @Stateful
 public class Visita {
 	
+	/*session bean stateful responsavel por manter estado dos componentes enquanto a sessão do usuario durar */
+	
 	private Set<String> listaVisitantes = new HashSet();
 	
 	public Set<String> getListaVisitantes() {
