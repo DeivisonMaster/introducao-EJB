@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head></h:head>
+<h:body>
+	<f:view>
+		<h:form>
+			<h:outputText value="Cadastro de Visitas"/>
+			
+			<h:outputLabel value="Nome Visitante: " />
+			<h:inputText value="#{controllerVisitas.visitante}" />
+			<br/>
+			<h:commandButton action="#{controllerVisitas.entrouVisita()}" value="incluir" />
+			<br/>
+			
+			<h:dataTable var="visita" value="#{controllerVisitas.visitas}" border="1" rows="5">
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Visitantes"/>
+					</f:facet>
+					<h:outputText value="#{visita}"/>
+				</h:column>
+			</h:dataTable>
+		</h:form>
+	</f:view>
+</h:body>
+</html>
